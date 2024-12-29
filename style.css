@@ -3,17 +3,10 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
-  justify-content: center; /* Wycentrowanie w poziomie */
-  align-items: center; /* Wycentrowanie w pionie */
-  background-color: #fce4ec; /* Kolor tła */
+  justify-content: center; /* Wyśrodkowanie poziome */
+  align-items: center; /* Wyśrodkowanie pionowe */
+  background-color: #fce4ec; /* Tło strony */
   overflow: hidden;
-  position: relative; /* Aby ustawić grafikę jako tło */
-}
-
-/* Kontener główny */
-.container {
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -21,27 +14,26 @@ body {
 .logo {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Wypełnia ekran, zachowując proporcje */
+  object-fit: cover; /* Dopasowanie grafiki do ekranu */
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1; /* Grafika w tle */
 }
 
-/* Sekcja linków */
+/* Kontener z linkami */
 .links {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column; /* Linki w jednej kolumnie */
+  gap: 20px; /* Odstępy między linkami */
   position: absolute;
   top: 50%; /* Środek strony w pionie */
   left: 50%; /* Środek strony w poziomie */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* Wyśrodkowanie kontenera */
+  text-align: center;
 }
 
-/* Style pojedynczego linka */
+/* Pojedynczy link */
 .link {
   text-decoration: none;
   font-size: 20px;
@@ -50,11 +42,33 @@ body {
   background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
   padding: 10px 20px;
   border-radius: 5px;
-  text-align: center; /* Wyrównanie tekstu w linkach */
   transition: background-color 0.3s ease;
 }
 
 /* Efekt po najechaniu na link */
 .link:hover {
   background-color: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło */
+}
+
+/* Dostosowanie dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .link {
+    font-size: 16px; /* Mniejszy rozmiar tekstu */
+    padding: 8px 16px; /* Mniejsze odstępy */
+  }
+
+  .links {
+    gap: 15px; /* Mniejszy odstęp między linkami */
+  }
+}
+
+@media (max-width: 480px) {
+  .link {
+    font-size: 14px; /* Jeszcze mniejszy tekst na bardzo małych ekranach */
+    padding: 6px 12px; /* Dopasowane odstępy */
+  }
+
+  .links {
+    gap: 10px; /* Bardzo mały odstęp między linkami */
+  }
 }
