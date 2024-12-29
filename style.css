@@ -22,11 +22,10 @@ body {
 
 .links {
   position: absolute;
-  bottom: 20%; /* Umieszczenie linków w dolnej części obrazu */
-  left: 20; /* Przesunięcie na środek ekranu */
-  transform: translateX(-50%); /* Wyśrodkowanie linków */
+  bottom: 100px; /* Odstęp od dołu strony */
+  left: 50%; /* Przesunięcie w lewo na środek */
+  transform: translateX(-50%); /* Wyśrodkowanie poziome */
   display: flex;
-  justify-content: center;
   gap: 20px; /* Odstęp między linkami */
 }
 
