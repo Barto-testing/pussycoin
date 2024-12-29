@@ -25,14 +25,25 @@ body {
   object-fit: contain; /* Dopasowanie logo w obrębie kontenera */
 }
 
-/* Kontener na linki */
-.links {
-  width: 100%;
-  height: 10%; /* Pozostałe 30% dla linków */
-  display: flex;
-  justify-content: center; /* Wyśrodkowanie poziome */
-  #align-items: #center; /* Wyśrodkowanie pionowe */
-  gap: 30px; /* Odstępy między linkami */
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Link podskakuje o 5px */
+  }
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #00BEE9;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  animation: wave 1.5s infinite; /* Ruch w górę i w dół */
 }
 
 /* Styl linków */
