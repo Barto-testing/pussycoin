@@ -1,15 +1,14 @@
 body {
   margin: 0;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fce4ec; /* Kolor tła, na wypadek braku obrazu */
+  display: grid; /* Użycie siatki CSS */
+  grid-template-rows: 1fr auto; /* Grafika zajmuje całą dostępną przestrzeń, linki na dole */
+  background-color: #fce4ec; /* Kolor tła */
   overflow: hidden;
-  position: relative; /* Potrzebne do działania elementów absolutnych */
 }
 
 .container {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -18,15 +17,16 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Wypełnia ekran, zachowując proporcje */
+  grid-row: 1 / 2; /* Grafika w pierwszym wierszu siatki */
 }
 
 .links {
-  position: absolute;
-  bottom: 100px; /* Odstęp od dolnej krawędzi */
-
+  grid-row: 2 / 3; /* Linki w drugim wierszu siatki */
   display: flex;
-  justify-content: center; /* Wyśrodkowanie linków w poziomie */
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  align-items: center; /* Wyśrodkowanie w pionie */
   gap: 20px; /* Odstęp między linkami */
+  padding-bottom: 20px; /* Odstęp od dolnej krawędzi */
 }
 
 .link {
