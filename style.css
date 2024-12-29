@@ -1,39 +1,42 @@
 body {
   margin: 0;
   height: 100vh;
-  display: grid; /* Siatka CSS */
-  grid-template-rows: 1fr auto; /* Grafika i linki w osobnych wierszach */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fce4ec; /* Kolor tła */
   overflow: hidden;
+  position: relative; /* Umożliwia pozycjonowanie dzieci absolutnie */
 }
 
 .container {
-  position: relative;
   width: 100%;
   height: 100%;
+  position: relative; /* Potrzebne dla pozycji linków */
 }
 
 .logo {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Wypełnia ekran, zachowując proporcje */
-  grid-row: 1 / 2; /* Grafika w pierwszym wierszu siatki */
+  position: absolute; /* Grafika jako tło */
+  top: 0;
+  left: 0;
 }
 
 .links {
-  grid-row: 2 / 3; /* Linki w drugim wierszu siatki */
+  position: absolute;
+  bottom: 50px; /* Odległość od dolnej krawędzi ekranu */
+  left: 50%; /* Pozycjonowanie względem środka ekranu */
+  transform: translateX(-50%); /* Wyśrodkowanie linków */
   display: flex;
-  justify-content: center; /* Centrowanie poziome */
-  gap: 20px; /* Odstępy między linkami */
-  padding-bottom: 30px; /* Odstęp od dolnej krawędzi */
-  text-align: center; /* Centrowanie tekstu w linkach */
-  width: 100%; /* Kontener linków rozciągnięty na całą szerokość */
+  gap: 20px; /* Odstęp między linkami */
 }
-  
+
 .link {
   text-decoration: none;
   font-size: 20px;
-  color: #FF79C4;
+  color: #ffffff;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
   padding: 10px 20px;
