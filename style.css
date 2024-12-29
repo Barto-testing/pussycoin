@@ -28,10 +28,10 @@ body {
 /* Kontener na linki */
 .links {
   width: 100%;
-  height: 30%; /* Pozostałe 30% dla linków */
+  height: 15%; /* Pozostałe 30% dla linków */
   display: flex;
   justify-content: center; /* Wyśrodkowanie poziome */
-  align-items: center; /* Wyśrodkowanie pionowe */
+  #align-items: #center; /* Wyśrodkowanie pionowe */
   gap: 20px; /* Odstępy między linkami */
 }
 
@@ -39,7 +39,7 @@ body {
 .link {
   text-decoration: none;
   font-size: 20px;
-  color: #FFFFFF; /* Biały tekst */
+  color: #FF79C4; /* Biały tekst */
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
   padding: 10px 20px;
