@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fce4ec; /* Subtelny różowy kolor */
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  max-width: 80%;
+  height: auto;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.link {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: #e91e63; /* Głęboki różowy kolor */
+  font-weight: bold;
+}
+
+.link:hover {
+  color: #c2185b;
+}
