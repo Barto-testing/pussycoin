@@ -1,8 +1,8 @@
 body {
   margin: 0;
   height: 100vh;
-  display: grid; /* Użycie siatki CSS */
-  grid-template-rows: 1fr auto; /* Grafika zajmuje całą dostępną przestrzeń, linki na dole */
+  display: grid; /* Siatka CSS */
+  grid-template-rows: 1fr auto; /* Grafika i linki w osobnych wierszach */
   background-color: #fce4ec; /* Kolor tła */
   overflow: hidden;
 }
@@ -23,16 +23,17 @@ body {
 .links {
   grid-row: 2 / 3; /* Linki w drugim wierszu siatki */
   display: flex;
-  justify-content: center; /* Wyśrodkowanie w poziomie */
-  align-items: center; /* Wyśrodkowanie w pionie */
-  gap: 20px; /* Odstęp między linkami */
-  padding-bottom: 20px; /* Odstęp od dolnej krawędzi */
+  justify-content: center; /* Centrowanie poziome */
+  gap: 20px; /* Odstępy między linkami */
+  padding-bottom: 30px; /* Odstęp od dolnej krawędzi */
+  text-align: center; /* Centrowanie tekstu w linkach */
+  width: 100%; /* Kontener linków rozciągnięty na całą szerokość */
 }
-
+  
 .link {
   text-decoration: none;
   font-size: 20px;
-  color: #ffffff;
+  color: #FF79C4;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
   padding: 10px 20px;
