@@ -1,36 +1,32 @@
 body {
   margin: 0;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid; /* Użycie siatki CSS */
+  grid-template-rows: 1fr auto; /* Grafika zajmuje całą dostępną przestrzeń, linki na dole */
   background-color: #fce4ec; /* Kolor tła */
   overflow: hidden;
-  position: relative; /* Umożliwia pozycjonowanie dzieci absolutnie */
 }
 
 .container {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative; /* Potrzebne dla pozycji linków */
 }
 
 .logo {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Wypełnia ekran, zachowując proporcje */
-  position: absolute; /* Grafika jako tło */
-  top: 0;
-  left: 0;
+  grid-row: 1 / 2; /* Grafika w pierwszym wierszu siatki */
 }
 
 .links {
-  position: absolute;
-  bottom: 50px; /* Odległość od dolnej krawędzi ekranu */
-  left: 50%; /* Pozycjonowanie względem środka ekranu */
-  transform: translateX(-50%); /* Wyśrodkowanie linków */
+  grid-row: 2 / 3; /* Linki w drugim wierszu siatki */
   display: flex;
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  align-items: center; /* Wyśrodkowanie w pionie */
   gap: 20px; /* Odstęp między linkami */
+  padding-bottom: 20px; /* Odstęp od dolnej krawędzi */
 }
 
 .link {
