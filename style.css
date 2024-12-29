@@ -31,8 +31,14 @@ body {
 /* Sekcja linków */
 .links {
   display: flex;
-  flex-direction: column; /* Linki jeden pod drugim */
-  gap: 20px; /* Odstęp między linkami */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%; /* Środek strony w pionie */
+  left: 50%; /* Środek strony w poziomie */
+  transform: translate(-50%, -50%);
 }
 
 /* Style pojedynczego linka */
