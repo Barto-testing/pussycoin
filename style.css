@@ -23,7 +23,7 @@ body {
 .links {
   position: absolute;
   bottom: 100px; /* Odstęp od dolnej krawędzi */
-  width: 100%; /* Rozciągnięcie na całą szerokość */
+
   display: flex;
   justify-content: center; /* Wyśrodkowanie linków w poziomie */
   gap: 20px; /* Odstęp między linkami */
