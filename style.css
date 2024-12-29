@@ -23,7 +23,8 @@ body {
 .links {
   position: absolute;
   bottom: 20%; /* Umieszczenie linków w dolnej części obrazu */
-  width: 100%;
+  left: 50%; /* Przesunięcie na środek ekranu */
+  transform: translateX(-50%); /* Wyśrodkowanie linków */
   display: flex;
   justify-content: center;
   gap: 20px; /* Odstęp między linkami */
