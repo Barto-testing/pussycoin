@@ -1,35 +1,38 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* Wysokość na cały ekran */
   background-color: #fce4ec; /* Subtelny różowy kolor */
-}
-
-.container {
-  text-align: center;
+  overflow: hidden; /* Ukrycie przewijania */
 }
 
 .logo {
-  max-width: 80%;
-  height: auto;
+  width: 100vw; /* Szerokość na cały ekran */
+  height: 100vh; /* Wysokość na cały ekran */
+  object-fit: cover; /* Utrzymanie proporcji obrazu */
 }
 
 .links {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 20px; /* Odstęp od dołu */
+  text-align: center;
+  width: 100%;
 }
 
 .link {
-  display: block;
-  margin: 10px 0;
+  display: inline-block;
+  margin: 0 10px;
   text-decoration: none;
   font-size: 18px;
-  color: #e91e63; /* Głęboki różowy kolor */
+  color: #ffffff;
   font-weight: bold;
+  background-color: rgba(233, 30, 99, 0.8); /* Półprzezroczysty różowy */
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .link:hover {
-  color: #c2185b;
+  background-color: rgba(194, 24, 91, 0.9); /* Ciemniejszy róż przy najechaniu */
 }
