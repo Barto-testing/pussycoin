@@ -2,19 +2,26 @@
 body {
   margin: 0;
   height: 100vh;
-  background: url('pussbanngrey.jpeg') no-repeat center center fixed; /* Tło jako obraz */
-  background-size: cover; /* Dopasowanie tła do ekranu */
-  color: #FFFFFF; /* Biały tekst */
+  background: url('pussbanngrey.jpeg') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the background covers the entire screen */
+  color: #FFFFFF; /* White text */
   display: flex;
-  flex-direction: column; /* Ustawienie elementów w kolumnie */
-  justify-content: center; /* Wyśrodkowanie w pionie */
-  align-items: center; /* Wyśrodkowanie w poziomie */
-  font-family: Consolas, monospace; /* Styl czcionki kodu */
-  padding: 0 20px; /* Odstępy dla mniejszych ekranów */
-  box-sizing: border-box; /* Uwzględnienie paddingu w rozmiarze elementów */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  font-family: Consolas, monospace; /* Monospace font */
+  padding: 0 20px;
+  box-sizing: border-box; /* Include padding in the element's width/height */
   overflow: hidden;
 }
 
+/* Ensure compatibility for larger screens */
+@media (min-width: 1024px) {
+  body {
+    background: url('pussbanngrey.jpeg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
 /* Typing animation container */
 .typing-container {
   margin-bottom: 40px; /* Odstęp poniżej tekstu */
