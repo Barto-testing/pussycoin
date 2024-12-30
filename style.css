@@ -8,24 +8,26 @@ body {
   justify-content: center; /* Wyśrodkowanie poziome */
   align-items: center; /* Wyśrodkowanie pionowe */
   font-family: Consolas, monospace; /* Styl kodu */
+  padding: 0 20px; /* Dodatkowe odstępy dla bezpieczeństwa */
+  box-sizing: border-box; /* Uwzględnianie paddingu */
   overflow: hidden;
-  padding: 0 10px; /* Odstęp dla małych ekranów */
 }
 
 /* Kontener na całą treść */
 .center-content {
   text-align: center; /* Wyśrodkowanie tekstu */
   max-width: 100%; /* Zapobieganie ucinaniu tekstu */
-  word-wrap: break-word; /* Łamanie tekstu na małych ekranach */
+  overflow-wrap: break-word; /* Łamanie tekstu na małych ekranach */
+  word-break: break-word; /* Dodatkowe wsparcie dla przeglądarek */
 }
 
 /* Efekt pisania kodu */
 .typing-text {
-  font-size: 18px; /* Rozmiar tekstu */
-  white-space: nowrap; /* Nie łamie linii */
+  font-size: 16px; /* Zmniejszony rozmiar dla mniejszych ekranów */
+  white-space: normal; /* Pozwala na łamanie linii */
   overflow: hidden; /* Ukrywa niewidoczny tekst */
   border-right: 2px solid #FFFFFF; /* Kursor */
-  max-width: 100%; /* Tekst dopasowany do ekranu */
+  display: inline-block;
   animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Animacja */
 }
 
@@ -60,7 +62,7 @@ body {
 
 .link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #FF79C4; /* Różowy kolor linków */
   background-color: rgba(255, 255, 255, 0.1); /* Półprzezroczyste tło */
   padding: 8px 16px;
@@ -68,9 +70,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Jasne tło po najechaniu */
-}
 .link:hover {
   background-color: rgba(255, 255, 255, 0.2); /* Jasne tło po najechaniu */
 }
