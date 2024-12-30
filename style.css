@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background-color: #000000; /* Czarny kolor tła */
+  background-color: #1A1A1A; /* Czarny kolor tła */
   background: url('pussbanngrey.jpeg') no-repeat center center; /* Obraz jako tło */
   background-size: auto 50%; /* Obraz zajmuje 50% wysokości ekranu, proporcjonalnie */
   color: #FFFFFF; /* Biały tekst */
