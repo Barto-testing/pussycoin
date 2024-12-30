@@ -50,7 +50,7 @@ body {
 .link {
   text-decoration: none;
   font-size: 20px;
-  color: #FF79C4; /* Biały tekst */
+  color: #FF79C4; /* Różowy tekst */
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
   padding: 10px 20px;
@@ -61,4 +61,19 @@ body {
 
 .link:hover {
   background-color: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło po najechaniu */
+}
+
+/* Styl napisu w prawym górnym rogu */
+.corner-text {
+  position: absolute;
+  top: 10px; /* Odległość od góry */
+  right: 10px; /* Odległość od prawej krawędzi */
+  font-size: 14px; /* Rozmiar tekstu */
+  color: #FFFFFF; /* Kolor tekstu */
+  background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
+  padding: 8px 12px; /* Wewnętrzne odstępy */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  max-width: 300px; /* Maksymalna szerokość tekstu */
+  text-align: center; /* Wyśrodkowanie tekstu w bloku */
+  font-family: Arial, sans-serif; /* Prosty font */
 }
