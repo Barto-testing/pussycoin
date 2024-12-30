@@ -1,75 +1,49 @@
-/* Ogólne ustawienia */
+/* General styling */
 body {
   margin: 0;
   height: 100vh;
-  background-color: #333333; /* Ciemnoszare tło */
-  color: #FFFFFF; /* Biały tekst */
+  background-color: #333333; /* Dark gray background */
+  color: #FFFFFF; /* White text */
   display: flex;
-  flex-direction: column; /* Stacking items vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  font-family: Consolas, monospace; /* Styl kodu */
-  padding: 0 20px; /* Dodatkowe odstępy dla bezpieczeństwa */
-  box-sizing: border-box; /* Uwzględnianie paddingu */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-family: Consolas, monospace; /* Monospace font for a coding style */
+  padding: 0 20px; /* Extra padding for safety on small screens */
+  box-sizing: border-box; /* Include padding in width/height calculations */
   overflow: hidden;
 }
 
-/* Kontener na całą treść */
+/* Container for all content */
 .center-content {
-  text-align: center; /* Wyśrodkowanie tekstu */
-  max-width: 100%; /* Zapobieganie ucinaniu tekstu */
-  overflow-wrap: break-word; /* Łamanie tekstu na małych ekranach */
-  word-break: break-word; /* Dodatkowe wsparcie dla przeglądarek */
+  text-align: center; /* Center the text */
+  max-width: 100%; /* Prevent cutting off text */
+  overflow-wrap: break-word; /* Wrap long words on smaller screens */
+  word-break: break-word; /* Additional support for browsers */
 }
 
-/* Efekt pisania kodu */
+/* Typing effect */
 .typing-text {
-  font-size: 16px; /* Zmniejszony rozmiar dla mniejszych ekranów */
-  white-space: normal; /* Pozwala na łamanie linii */
-  overflow: hidden; /* Ukrywa niewidoczny tekst */
-  border-right: 2px solid #FFFFFF; /* Kursor */
+  font-size: 16px; /* Smaller size for smaller screens */
+  white-space: normal; /* Allow line breaks */
+  overflow: hidden; /* Hide overflowing text */
+  border-right: 2px solid #FFFFFF; /* Cursor effect */
   display: inline-block;
-  animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Animacja */
+  animation: typing 5s steps(70, end) 1 forwards, blink-caret 0.5s step-end 10; /* Type once and stop */
 }
 
-/* Efekt pisania */
+/* Typing animation */
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 100%; /* Całkowita szerokość tekstu */
+    width: 100%; /* Full width of the text */
   }
 }
 
-/* Efekt mrugającego kursora */
+/* Blinking caret animation */
 @keyframes blink-caret {
-  from {
-    border-right-color: #FFFFFF;
-  }
-  to {
+  50% {
     border-right-color: transparent;
   }
 }
-
-/* Styl linków */
-.links {
-  margin-top: 50px; /* Większy odstęp od tekstu */
-  display: flex;
-  flex-wrap: wrap; /* Linki zawijają się na mniejszych ekranach */
-  gap: 10px; /* Odstępy między linkami */
-  justify-content: center; /* Wyśrodkowanie linków */
-}
-
-.link {
-  text-decoration: none;
-  font-size: 14px;
-  color: #FF79C4; /* Różowy kolor linków */
-  background-color: rgba(255, 255, 255, 0.1); /* Półprzezroczyste tło */
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.link:hover {
-  background-color: rgba
