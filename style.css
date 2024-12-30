@@ -28,7 +28,7 @@ body {
 .link {
   text-decoration: none;
   font-size: 20px;
-  color: #FF79C4; /* Różowy tekst */
+  color: #FFFFFF; /* Różowy tekst */
   font-weight: bold;
   padding: 10px 20px;
   transition: background-color 0.2s ease;
