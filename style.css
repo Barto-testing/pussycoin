@@ -28,7 +28,7 @@ body {
   overflow: hidden; /* Ukrywa niewidoczny tekst */
   border-right: 2px solid #FFFFFF; /* Kursor */
   display: inline-block;
-  animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Animacja */
+  animation: typing 5s steps(70, end) 1 forwards, blink-caret 0.5s step-end 10; /* Animacja pisania raz, kursor znika */
 }
 
 /* Efekt pisania */
@@ -43,33 +43,7 @@ body {
 
 /* Efekt mrugającego kursora */
 @keyframes blink-caret {
-  from {
-    border-right-color: #FFFFFF;
-  }
-  to {
+  50% {
     border-right-color: transparent;
   }
-}
-
-/* Styl linków */
-.links {
-  margin-top: 20px; /* Odstęp od tekstu */
-  display: flex;
-  flex-wrap: wrap; /* Linki zawijają się na mniejszych ekranach */
-  gap: 10px; /* Odstępy między linkami */
-  justify-content: center; /* Wyśrodkowanie linków */
-}
-
-.link {
-  text-decoration: none;
-  font-size: 14px;
-  color: #FF79C4; /* Różowy kolor linków */
-  background-color: rgba(255, 255, 255, 0.1); /* Półprzezroczyste tło */
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Jasne tło po najechaniu */
 }
