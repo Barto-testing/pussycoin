@@ -25,28 +25,6 @@ body {
   object-fit: contain; /* Dopasowanie logo w obrębie kontenera */
 }
 
-@keyframes wave {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px); /* Link podskakuje o 5px */
-  }
-}
-
-.link {
-  text-decoration: none;
-  font-size: 20px;
-  color: #00BEE9;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  animation: wave 1.5s infinite; /* Ruch w górę i w dół */
-}
-
-/* Styl linków */
 .link {
   text-decoration: none;
   font-size: 20px;
@@ -66,7 +44,7 @@ body {
   position: absolute;
   top: 20px; /* Odległość od góry */
   right: 20px; /* Odległość od prawej krawędzi */
-  font-size: 18px; /* Większy rozmiar tekstu */
+  font-size: 24px; /* Większy rozmiar tekstu */
   color: #FFFFFF; /* Biały kolor tekstu */
   font-weight: bold; /* Pogrubienie */
   font-family: Arial, sans-serif; /* Prosty font */
