@@ -1,10 +1,10 @@
 body {
   margin: 0;
   height: 100vh;
-  background: url('pussbanngrey.jpeg') no-repeat center center; /* Tło w centrum */
-  background-size: contain; /* Dopasowanie całego obrazu */
-  background-attachment: fixed; /* Tło "przyklejone" */
-  color: #FFFFFF; /* Kolor tekstu */
+  background-color: #000000; /* Czarny kolor tła */
+  background: url('pussbanngrey.jpeg') no-repeat center center; /* Obraz jako tło */
+  background-size: auto 50%; /* Obraz zajmuje 50% wysokości ekranu, proporcjonalnie */
+  color: #FFFFFF; /* Biały tekst */
   display: flex;
   flex-direction: column; /* Ustawienie elementów w pionie */
   justify-content: center; /* Wyśrodkowanie w pionie */
@@ -16,17 +16,18 @@ body {
 /* Dostosowanie dla mniejszych ekranów */
 @media (max-width: 1024px) {
   body {
-    background-size: cover; /* Wypełnij ekran na mniejszych urządzeniach */
-    background-position: center top; /* Wyrównanie do góry */
+    background-size: auto 40%; /* Zmniejszenie obrazu do 40% wysokości */
+    background-position: center center; /* Wyśrodkowanie obrazu */
   }
 }
 
 /* Dodatkowe poprawki dla bardzo małych ekranów */
 @media (max-width: 768px) {
   body {
-    background-size: cover; /* Upewnij się, że obraz jest dopasowany */
-    background-position: center center; /* Wyrównaj w pionie i poziomie */
+    background-size: auto 30%; /* Zmniejszenie obrazu do 30% wysokości */
+    background-position: center center; /* Wyśrodkowanie obrazu */
   }
+}
 }
 /* Typing animation container */
 .typing-container {
