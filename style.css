@@ -1,25 +1,31 @@
-/* General styling */
 body {
   margin: 0;
   height: 100vh;
-  background: url('pussbanngrey.jpeg') no-repeat center center fixed; /* Background image */
-  background-size: cover; /* Ensure the background covers the entire screen */
-  color: #FFFFFF; /* White text */
+  background: url('pussbanngrey.jpeg') no-repeat center center; /* Tło w centrum */
+  background-size: contain; /* Dopasowanie całego obrazu */
+  background-attachment: fixed; /* Tło "przyklejone" */
+  color: #FFFFFF; /* Kolor tekstu */
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  font-family: Consolas, monospace; /* Monospace font */
-  padding: 0 20px;
-  box-sizing: border-box; /* Include padding in the element's width/height */
+  flex-direction: column; /* Ustawienie elementów w pionie */
+  justify-content: center; /* Wyśrodkowanie w pionie */
+  align-items: center; /* Wyśrodkowanie w poziomie */
+  font-family: Consolas, monospace; /* Styl tekstu */
   overflow: hidden;
 }
 
-/* Ensure compatibility for larger screens */
-@media (min-width: 1024px) {
+/* Dostosowanie dla mniejszych ekranów */
+@media (max-width: 1024px) {
   body {
-    background: url('pussbanngrey.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover; /* Wypełnij ekran na mniejszych urządzeniach */
+    background-position: center top; /* Wyrównanie do góry */
+  }
+}
+
+/* Dodatkowe poprawki dla bardzo małych ekranów */
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* Upewnij się, że obraz jest dopasowany */
+    background-position: center center; /* Wyrównaj w pionie i poziomie */
   }
 }
 /* Typing animation container */
