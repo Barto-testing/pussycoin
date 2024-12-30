@@ -2,57 +2,28 @@
 body {
   margin: 0;
   height: 100vh;
-  background-color: #FF64AC; /* Różowe tło */
+  background-color: #333333; /* Ciemnoszare tło */
+  color: #FFFFFF; /* Biały tekst */
   display: flex;
-  flex-direction: column; /* Układ pionowy */
-  justify-content: flex-start; /* Rozpoczynaj od góry */
-  align-items: center;
+  justify-content: center; /* Wyśrodkowanie poziome */
+  align-items: center; /* Wyśrodkowanie pionowe */
+  font-family: Consolas, monospace; /* Styl kodu */
   overflow: hidden;
 }
 
-/* Kontener na logo */
-.logo-container {
-  width: 100%;
-  height: 70%; /* Logo zajmuje 70% ekranu */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Kontener na całą treść */
+.center-content {
+  text-align: center; /* Wyśrodkowanie tekstu */
 }
 
-.logo {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Dopasowanie logo w obrębie kontenera */
-}
-
-.link {
-  text-decoration: none;
-  font-size: 20px;
-  color: #FFFFFF; /* Różowy tekst */
-  font-weight: bold;
-  padding: 10px 20px;
-  transition: background-color 0.2s ease;
-  text-align: center;
-}
-
-.link:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło po najechaniu */
-}
-
-/* Styl napisu z efektem pisania */
+/* Efekt pisania kodu */
 .typing-text {
-  position: absolute;
-  top: 20px; /* Odległość od góry */
-  right: 20px; /* Odległość od prawej */
-  font-size: 24px; /* Rozmiar tekstu */
-  color: #FFFFFF; /* Biały kolor tekstu */
-  font-weight: bold; /* Pogrubienie */
-  font-family: Arial, sans-serif; /* Prosty font */
-  white-space: nowrap; /* Zapobiega łamaniu linii */
-  overflow: hidden; /* Ukrywa tekst, który jeszcze nie jest "napisany" */
-  border-right: 2px solid #FFFFFF; /* Animowany kursor */
-  width: 0; /* Startowa szerokość tekstu */
-  animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Efekty */
+  font-size: 18px; /* Rozmiar tekstu */
+  white-space: nowrap; /* Nie łamie linii */
+  overflow: hidden; /* Ukrywa niewidoczny tekst */
+  border-right: 2px solid #FFFFFF; /* Kursor */
+  width: 0; /* Początkowa szerokość tekstu */
+  animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Animacja */
 }
 
 /* Efekt pisania */
@@ -61,7 +32,7 @@ body {
     width: 0;
   }
   to {
-    width: 100%; /* Szerokość całego tekstu */
+    width: 100%; /* Całkowita szerokość tekstu */
   }
 }
 
@@ -73,4 +44,26 @@ body {
   to {
     border-right-color: transparent;
   }
+}
+
+/* Styl linków */
+.links {
+  margin-top: 20px; /* Odstęp od tekstu */
+  display: flex;
+  gap: 20px; /* Odstępy między linkami */
+  justify-content: center; /* Wyśrodkowanie linków */
+}
+
+.link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #FF79C4; /* Różowy kolor linków */
+  background-color: rgba(255, 255, 255, 0.1); /* Półprzezroczyste tło */
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Jasne tło po najechaniu */
 }
