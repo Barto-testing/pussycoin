@@ -5,20 +5,19 @@ body {
   background-color: #333333; /* Dark gray background */
   color: #FFFFFF; /* White text */
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
   font-family: Consolas, monospace; /* Monospace font for a coding style */
   padding: 0 20px; /* Extra padding for safety on small screens */
   box-sizing: border-box; /* Include padding in width/height calculations */
   overflow: hidden;
 }
 
-/* Container for all content */
-.center-content {
-  text-align: center; /* Center the text */
-  max-width: 100%; /* Prevent cutting off text */
-  overflow-wrap: break-word; /* Wrap long words on smaller screens */
-  word-break: break-word; /* Additional support for browsers */
+/* Typing animation container */
+.typing-container {
+  margin-bottom: 40px; /* Add space below the typing text */
+  text-align: center;
 }
 
 /* Typing effect */
@@ -46,4 +45,26 @@ body {
   50% {
     border-right-color: transparent;
   }
+}
+
+/* Link styling */
+.links {
+  display: flex;
+  flex-wrap: wrap; /* Allow links to wrap if there's not enough space */
+  gap: 10px; /* Space between links */
+  justify-content: center; /* Center the links */
+}
+
+.link {
+  text-decoration: none;
+  font-size: 14px;
+  color: #FF79C4; /* Pink color for links */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Lighter background on hover */
 }
