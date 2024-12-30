@@ -9,11 +9,14 @@ body {
   align-items: center; /* Wyśrodkowanie pionowe */
   font-family: Consolas, monospace; /* Styl kodu */
   overflow: hidden;
+  padding: 0 10px; /* Odstęp dla małych ekranów */
 }
 
 /* Kontener na całą treść */
 .center-content {
   text-align: center; /* Wyśrodkowanie tekstu */
+  max-width: 100%; /* Zapobieganie ucinaniu tekstu */
+  word-wrap: break-word; /* Łamanie tekstu na małych ekranach */
 }
 
 /* Efekt pisania kodu */
@@ -22,7 +25,7 @@ body {
   white-space: nowrap; /* Nie łamie linii */
   overflow: hidden; /* Ukrywa niewidoczny tekst */
   border-right: 2px solid #FFFFFF; /* Kursor */
-  width: 0; /* Początkowa szerokość tekstu */
+  max-width: 100%; /* Tekst dopasowany do ekranu */
   animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Animacja */
 }
 
@@ -50,7 +53,8 @@ body {
 .links {
   margin-top: 20px; /* Odstęp od tekstu */
   display: flex;
-  gap: 20px; /* Odstępy między linkami */
+  flex-wrap: wrap; /* Linki zawijają się na mniejszych ekranach */
+  gap: 10px; /* Odstępy między linkami */
   justify-content: center; /* Wyśrodkowanie linków */
 }
 
@@ -64,6 +68,9 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Jasne tło po najechaniu */
+}
 .link:hover {
   background-color: rgba(255, 255, 255, 0.2); /* Jasne tło po najechaniu */
 }
