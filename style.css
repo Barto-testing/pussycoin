@@ -39,15 +39,38 @@ body {
   background-color: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło po najechaniu */
 }
 
-/* Styl napisu w prawym górnym rogu */
-.corner-text {
+/* Styl napisu z efektem pisania */
+.typing-text {
   position: absolute;
   top: 20px; /* Odległość od góry */
-  right: 20px; /* Odległość od prawej krawędzi */
-  font-size: 24px; /* Większy rozmiar tekstu */
+  right: 20px; /* Odległość od prawej */
+  font-size: 24px; /* Rozmiar tekstu */
   color: #FFFFFF; /* Biały kolor tekstu */
   font-weight: bold; /* Pogrubienie */
   font-family: Arial, sans-serif; /* Prosty font */
-  text-align: right; /* Wyrównanie tekstu do prawej */
-  line-height: 1.5; /* Większa odległość między liniami */
+  white-space: nowrap; /* Zapobiega łamaniu linii */
+  overflow: hidden; /* Ukrywa tekst, który jeszcze nie jest "napisany" */
+  border-right: 2px solid #FFFFFF; /* Animowany kursor */
+  width: 0; /* Startowa szerokość tekstu */
+  animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Efekty */
+}
+
+/* Efekt pisania */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Szerokość całego tekstu */
+  }
+}
+
+/* Efekt mrugającego kursora */
+@keyframes blink-caret {
+  from {
+    border-right-color: #FFFFFF;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
