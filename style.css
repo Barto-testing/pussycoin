@@ -52,9 +52,7 @@ body {
   font-size: 20px;
   color: #FF79C4; /* Różowy tekst */
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
   padding: 10px 20px;
-  border-radius: 5px;
   transition: background-color 0.2s ease;
   text-align: center;
 }
@@ -66,14 +64,12 @@ body {
 /* Styl napisu w prawym górnym rogu */
 .corner-text {
   position: absolute;
-  top: 10px; /* Odległość od góry */
-  right: 10px; /* Odległość od prawej krawędzi */
-  font-size: 14px; /* Rozmiar tekstu */
-  color: #FFFFFF; /* Kolor tekstu */
-  background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
-  padding: 8px 12px; /* Wewnętrzne odstępy */
-  border-radius: 5px; /* Zaokrąglone rogi */
-  max-width: 300px; /* Maksymalna szerokość tekstu */
-  text-align: center; /* Wyśrodkowanie tekstu w bloku */
+  top: 20px; /* Odległość od góry */
+  right: 20px; /* Odległość od prawej krawędzi */
+  font-size: 18px; /* Większy rozmiar tekstu */
+  color: #FFFFFF; /* Biały kolor tekstu */
+  font-weight: bold; /* Pogrubienie */
   font-family: Arial, sans-serif; /* Prosty font */
+  text-align: right; /* Wyrównanie tekstu do prawej */
+  line-height: 1.5; /* Większa odległość między liniami */
 }
