@@ -5,44 +5,30 @@ body {
   background-color: #333333; /* Ciemnoszare tło */
   color: #FFFFFF; /* Biały tekst */
   display: flex;
-  flex-direction: column; /* Ustawienie elementów w kolumnie */
-  justify-content: flex-start; /* Rozpoczynanie od góry */
-  align-items: center;
+  justify-content: center; /* Wyśrodkowanie poziome */
+  align-items: center; /* Wyśrodkowanie pionowe */
   font-family: Consolas, monospace; /* Styl kodu */
+  padding: 0 20px; /* Dodatkowe odstępy dla bezpieczeństwa */
+  box-sizing: border-box; /* Uwzględnianie paddingu */
   overflow: hidden;
-}
-
-/* Nagłówek z grafiką */
-.header {
-  width: 100%; /* Szerokość nagłówka */
-  display: flex;
-  justify-content: center; /* Wyśrodkowanie grafiki */
-  align-items: center;
-  padding: 10px 0; /* Odstępy góra-dół */
-}
-
-.banner {
-  max-width: 150px; /* Maksymalna szerokość grafiki */
-  height: auto; /* Automatyczna wysokość proporcjonalna do szerokości */
 }
 
 /* Kontener na całą treść */
 .center-content {
-  text-align: center;
+  text-align: center; /* Wyśrodkowanie tekstu */
   max-width: 100%; /* Zapobieganie ucinaniu tekstu */
   overflow-wrap: break-word; /* Łamanie tekstu na małych ekranach */
-  word-break: break-word;
-  margin-top: 20px; /* Odstęp od grafiki */
+  word-break: break-word; /* Dodatkowe wsparcie dla przeglądarek */
 }
 
 /* Efekt pisania kodu */
 .typing-text {
-  font-size: 16px;
+  font-size: 16px; /* Zmniejszony rozmiar dla mniejszych ekranów */
   white-space: normal; /* Pozwala na łamanie linii */
-  overflow: hidden;
-  border-right: 2px solid #FFFFFF;
+  overflow: hidden; /* Ukrywa niewidoczny tekst */
+  border-right: 2px solid #FFFFFF; /* Kursor */
   display: inline-block;
-  animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite;
+  animation: typing 5s steps(70, end), blink-caret 0.5s step-end infinite; /* Animacja */
 }
 
 /* Efekt pisania */
@@ -51,10 +37,11 @@ body {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 100%; /* Całkowita szerokość tekstu */
   }
 }
 
+/* Efekt mrugającego kursora */
 @keyframes blink-caret {
   from {
     border-right-color: #FFFFFF;
@@ -66,23 +53,23 @@ body {
 
 /* Styl linków */
 .links {
-  margin-top: 20px;
+  margin-top: 20px; /* Odstęp od tekstu */
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  flex-wrap: wrap; /* Linki zawijają się na mniejszych ekranach */
+  gap: 10px; /* Odstępy między linkami */
+  justify-content: center; /* Wyśrodkowanie linków */
 }
 
 .link {
   text-decoration: none;
   font-size: 14px;
-  color: #FF79C4;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #FF79C4; /* Różowy kolor linków */
+  background-color: rgba(255, 255, 255, 0.1); /* Półprzezroczyste tło */
   padding: 8px 16px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2); /* Jasne tło po najechaniu */
 }
